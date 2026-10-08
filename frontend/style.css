@@ -1,0 +1,102 @@
+body{
+    background-color: #0d0d0d; /*Fundo preto Profundo*/
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container{
+    background-color: #1a1a1a; /* Fundo cinza escuro */
+    border: 2px solid #8a2be2; /* Borda roxa */
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5); /* Brilho roxo */
+    max-width: 400px;
+    width: 100%;
+}
+
+.biometrics-area{
+    margin: 25px 0;
+    padding: 15px;
+    border: 1px dashed #8a2be2; /* Borda roxa */
+    border-radius: 5px;
+    background-color: #111; /* Fundo preto */  
+}
+
+#camera-feed{
+    width: 100%;
+    height: 200px;
+    background-color: #000; /* Fundo preto */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#auth-button{
+    background-color: #8a2be2; /* Botão roxo */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#auth-button:hover{
+    background-color: #6a1b9a; /* Roxo mais escuro no hover */
+}
+
+.hidden{
+    display: none;
+}
+
+/*classes dinamicas para o javaScript usar depois*/
+.error-text{
+    color: #ff4c4c; /* Vermelho para erros */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.success-text{
+    color: #00e676; /* Verde para sucesso */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/*Espaçamento e alinhamento da area de upload de imagem*/
+.file-upload-container{
+    margin-top: 15px;
+    margin-bottom: 30px; /* Cria o distanciamento  do botão roxo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*Estilização  e  arredondamento  do botão nativo de ficheiro*/
+#image-upload::file-selector-button{
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #8a2be2;
+    padding: 8px 20px;
+    border-radius: 20px; /* Arredondamento do botão */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#image-upload::file-selector-button:hover{
+    background-color: #8a2be2; /* Botão roxo no hover */
+}
+input[type=text],input[type=email]{box-sizing:border-box}
+.aviso{color:#ff4c4c;font-weight:bold;margin-bottom:12px}
+.card-nivel{margin-top:25px;padding:15px;border:1px dashed #8a2be2;border-radius:6px}
+.card-nivel button{background:#8a2be2;color:#fff;border:0;padding:8px 16px;border-radius:5px;cursor:pointer;font-weight:bold}
+.tab-wrap{overflow-x:auto;max-height:320px;overflow-y:auto}

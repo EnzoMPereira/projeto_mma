@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - MMA </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cadastro">
+    <div class="login-container" style="max-width: 450px;">
+        <h2>Cadastrar Servidor</h2>
+        <p style="margin-bottom: 20px;">Registro de credenciais e biometria</p>
+
+        <div style="text-align: left;">
+            <label for="new-nome" style="display:block;margin-bottom:5px;font-weight:bold;">Nome completo:</label>
+            <input type="text" id="new-nome" style="width:100%;padding:10px;margin-bottom:12px;border-radius:5px;border:1px solid #8a2be2;background-color:#111;color:white;">
+            <label for="new-email" style="display:block;margin-bottom:5px;font-weight:bold;">E-mail:</label>
+            <input type="email" id="new-email" style="width:100%;padding:10px;margin-bottom:12px;border-radius:5px;border:1px solid #8a2be2;background-color:#111;color:white;">
+            <label for="nivel-acesso" style="display:block;margin-bottom:5px;font-weight:bold;">Nível solicitado:</label>
+            <select id="nivel-acesso" style="width:100%;padding:10px;margin-bottom:12px;border-radius:5px;border:1px solid #8a2be2;background-color:#111;color:white;">
+                <option value="1">Nível 1 - Acesso geral</option>
+                <option value="2">Nível 2 - Direção</option>
+                <option value="3">Nível 3 - Autoridade máxima</option>
+            </select>
+            <small>O servidor só concede 2 ou 3 se quem cadastra for nível 3.</small>
+            <p id="msg" class="hidden" style="margin-top:10px"></p>
+        </div>
+        
+        <div class="biometrics-area">
+            <p style="font-size: 14px; margin-bottom: 10px;">Captura Facial para Banco de Dados:</p>
+            <video id="Register-camera" autoplay playsinline title="Câmera de Cadastro" style="width: 100%; height: 200px; background-color: #000; border-radius: 5px; border: 1px solid #8a2be2; margin-bottom: 15px;"></video>
+        </div>
+        
+        <button id="save-user-btn" style="background-color: #8a2be2; color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; width: 100%;">Salvar Cadastro</button>
+
+        <div style="margin-top: 15px;">
+            <a href="home.html" style="color: #8a2be2; text-decoration: none; font-weight: bold;">Voltar para Home</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

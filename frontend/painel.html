@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Painel Restrito - MMA</title><link rel="stylesheet" href="style.css">
+<style>
+        .dashboard-container {
+            max-width: 1000px;
+            width: 100%;
+            padding: 30px;
+            background-color: #1a1a1a;
+            border: 2px solid #8a2be2;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            margin: 40px auto;
+        }
+        .header-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #8a2be2;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .user-info {
+            color: #8a2be2;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .logout-btn {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: white;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #8a2be2;
+            color: white;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #222;
+        }
+        .level-badge {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            background-color: #333;
+            border: 1px solid #8a2be2;
+            color: white;
+        }
+    </style>
+</head>
+<body data-page="painel">
+<div class="dashboard-container">
+  <div class="header-panel">
+    <div><h2>Base de Dados - Financiamento Climático</h2><p>Ministério do Meio Ambiente (MMA)</p></div>
+    <div style="text-align:right;">
+      <p class="user-info" id="user-display">Carregando...</p>
+      <p class="level-badge" id="level-display">Nível: ...</p><br><br>
+      <a href="#" id="logout" class="logout-btn">Encerrar Sessão</a>
+    </div>
+  </div>
+  <p id="erro" class="aviso hidden"></p>
+  <div class="card-nivel"><b>Nível 1</b> - Dados gerais <button data-rota="/api/dados">Consultar</button></div>
+  <div class="card-nivel"><b>Nível 2</b> - Resumo da Direção <button data-rota="/api/direcao/resumo">Consultar</button></div>
+  <div class="card-nivel"><b>Nível 3</b> - Auditoria de acessos <button data-rota="/api/admin/auditoria">Consultar</button></div>
+  <div class="tab-wrap" id="saida"></div>
+</div>
+<script src="script.js"></script>
+</body></html>
